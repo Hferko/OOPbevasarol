@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="shortcut icon" href="cart2.png" type="image/x-icon">
+
+    <title>Bevásárlólista OOP</title>
+    <style>
+        body {
+            background-color: teal;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        h1 {
+            color: white;
+            background-color: rgba(205, 133, 63, 0.6);
+            font-size: 40px;
+            padding: 4px;
+        }
+
+        main,
+        header {
+            width: 85%;
+            padding: 1vw;
+            background-color: #ffcc99;
+            margin: 15px auto;
+            border: thin solid aqua;
+            border-radius: 8px;
+            box-shadow: 6px 8px 6px lavender;
+        }
+
+        .focim {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);            
+        }
+
+        .card {
+            width: 70%;
+            padding: 2% 0 10% 10%;
+            background-image: url("spiral.png");
+            background-size: cover;
+            margin: 30px auto;
+            text-align: left;            
+            font-size: 20px;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            background-color: teal;
+        }
+
+        .list-inline {
+            list-style: none;
+            text-align: center;
+        }
+
+        .list-inline>li {
+            display: inline-block;
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+            color: white;
+            padding: 15px;
+            font-size: 20px;
+        }
+
+        .list-inline>li:before {
+            content: "\200B";
+            position: absolute;
+        }
+
+        .list-inline>li:hover {
+            background: #ddd;
+            color: black;
+            cursor: cell;
+        }
+
+        .active{
+            background: green;            
+        }
+
+        input[type=text],
+        button {
+            padding: 5px;
+            font-weight: bold;
+            color: #003333;
+            margin: 10px;
+        }        
+
+        .athuzva {
+            font-weight: bold;
+            text-decoration: line-through;
+        }
+
+        .kijelolt {
+            background-color: aqua;
+        }
+
+        .uszik {
+            position: relative;
+            animation-name: uszik;
+            animation-duration: 1s;
+        }
+
+        @keyframes uszik {
+            0% {left: 50vw;}
+
+            100% {
+                top: 0px;
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img id="headImg" src="shopping.jpg" alt="Bevásárlólista" style="width:60%;">
+        <div class="focim">
+            <h1> Bevásárlólista </h1>
+            <h1 id="cim">mindenkinek</h1>
+        </div>
+    </header>
+
+    <nav class="sticky">
+        <ul class="list-inline">
+            <li id="en">MAGAMNAK</li>
+            <li id="szom">SZOMSZÉDASSZONYNAK</li>
+            <li id="bar">BARÁTNŐMNEK</li>
+            <li id="ex">FELESÉGEMNEK</li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="bevitel" style="padding:15px;">
+            Itt lehetőség szerint egy listát tudunk létrehozni, attól függően, kinek fogunk vásárolni.<br>
+            Válasszunk a menüből.
+        </div>
+    </main>
+    <br>
+    <script src="lista.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
